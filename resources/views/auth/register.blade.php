@@ -10,6 +10,7 @@
             background-color: #f7fafc;
             margin: 0;
             padding: 0;
+            background-image: url('/images/imagenHotel.jpg');
         }
 
         .navbar {

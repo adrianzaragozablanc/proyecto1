@@ -28,7 +28,5 @@ Route::middleware([
     })->name('dashboard');
 });
 
-
-Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
 Route::post('/profile/update-session', [ProfileController::class, 'updateSession'])->name('profile.update-session');
 

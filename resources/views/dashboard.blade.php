@@ -10,6 +10,7 @@
             font-family: 'figtree', sans-serif;
             margin: 0;
             padding: 0;
+            background-image: url('/images/imagenHotel.jpg');
         }
     </style>
 </head>
