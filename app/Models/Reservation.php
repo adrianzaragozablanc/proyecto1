@@ -5,25 +5,35 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Reservation extends Model
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = [
-        'room_id',
-        'check_in',
-        'check_out',
-        'num_guests',
+        'nombre',
         'dni',
-        'first_name',
-        'last_name',
-        'phone_number',
-        'address',
-        'city',
+        'direccion',
+        'poblacion',
+        'telefono',
+        'correo',
+        'num_huespedes',
+        'num_ninos',
+        'fecha_entrada',
+        'fecha_salida',
+        'user_id',
     ];
 
-    public function room()
+    /**
+     * Get the user that owns the reservation.
+     */
+    public function user()
     {
-        return $this->belongsTo(Room::class);
+        return $this->belongsTo(User::class);
     }
 }

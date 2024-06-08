@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,11 +23,13 @@ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
-
-Route::post('/profile/update-session', [ProfileController::class, 'updateSession'])->name('profile.update-session');
+]);
+Route::get('/dashboard', function () {
+    return view('welcome');
+})->name('dashboard');
+Route::get('/reserva', function () {
+    return view('reserva');
+})->name('reserva');
+Route::post('/reservas', [ReservationController::class, 'store'])->name('reservations.store');
+Route::get('/reservas/{id}', [ReservationController::class, 'show'])->name('reservations.show');
 

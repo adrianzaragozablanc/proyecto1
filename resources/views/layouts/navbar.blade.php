@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -13,16 +12,12 @@
         <div>
             <a href="/"
                 style="color: white; text-decoration: none; font-size: 1.5rem; margin-right: 450px; margin-left: 20px;">Inicio</a>
-            <a href="/about"
+            <a href="/reserva"
                 style="color: white; text-decoration: none; font-size: 1.5rem; margin-right: 250px;">Reservar</a>
         </div>
         <div>
             @if (Route::has('login'))
                 @auth
-                    @if (Request::is('/'))
-                        <a href="{{ url('/dashboard') }}"
-                            style="color: white; text-decoration: none; font-size: 1.5rem; margin-right: 20px;">Dashboard</a>
-                    @endif
                     <a href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                         style="color: white; text-decoration: none; font-size: 1.5rem;">Cerrar Sesión</a>

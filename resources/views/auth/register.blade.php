@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,22 +14,6 @@
             background-image: url('/images/imagenHotel.jpg');
         }
 
-        .navbar {
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            margin-right: 20px;
-        }
-
         .container {
             background-color: white;
             padding: 2rem;
@@ -37,7 +22,8 @@
             width: 100%;
             max-width: 400px;
             margin: auto;
-            margin-top: 20px; /* Ajusta el margen superior */
+            margin-top: 20px;
+            /* Ajusta el margen superior */
         }
 
         .form-group {
@@ -85,26 +71,9 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="navbar">
-        <div>
-            <a href="/">Inicio</a>
-            <a href="/about">Acerca de</a>
-            <a href="/contact">Contacto</a>
-        </div>
-        <div>
-            @if (Route::has('login'))
-                @auth
-                    <a href="{{ url('/dashboard') }}">Dashboard</a>
-                @else
-                    <a href="{{ route('login') }}">Log in</a>
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}">Register</a>
-                    @endif
-                @endauth
-            @endif
-        </div>
-    </div>
+    @include('layouts.navbar')
     <div class="content">
         <div class="container">
             <!-- Validation Errors -->
@@ -147,4 +116,5 @@
         </div>
     </div>
 </body>
+
 </html>
