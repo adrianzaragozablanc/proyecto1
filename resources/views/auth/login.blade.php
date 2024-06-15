@@ -101,15 +101,6 @@
                 <input id="password" type="password" name="password" required>
             </div>
 
-            <div class="form-group remember-me">
-                <input id="remember_me" type="checkbox" name="remember">
-                <span>Remember me</span>
-            </div>
-
-            <div class="form-group forgot-password">
-                <a href="{{ route('password.request') }}">Forgot your password?</a>
-            </div>
-
             <div class="form-group">
                 <button type="submit">Log in</button>
             </div>
