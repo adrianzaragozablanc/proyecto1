@@ -61,6 +61,16 @@
                     <input type="date" class="form-control" id="fecha_salida" name="fecha_salida" value="{{ $reservation->fecha_salida }}" required>
                 </div>
 
+                <div class="mb-3">
+                    <label for="Num_huespedes" class="form-label">Num_huespedes</label>
+                    <input type="number" class="form-control" id="num_huespedes" name="num_huespedes" value="{{ $reservation->num_huespedes }}" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Num_niños" class="form-label">Num_niños</label>
+                    <input type="number" class="form-control" id="num_ninos" name="num_ninos" value="{{ $reservation->num_ninos }}" required>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Guardar cambios</button>
             </form>
         </div>

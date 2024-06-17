@@ -80,6 +80,8 @@ class ReservationController extends Controller
             'dni' => 'required|string|max:10',
             'fecha_entrada' => 'required|date',
             'fecha_salida' => 'required|date|after_or_equal:fecha_entrada',
+            'num_huespedes' => 'required|integer',
+            'num_ninos' => 'required|integer',
         ]);
 
         $reservation = Reservation::findOrFail($id);

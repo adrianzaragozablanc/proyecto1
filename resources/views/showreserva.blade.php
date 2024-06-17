@@ -65,20 +65,24 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Nombre</th>
                                 <th>DNI</th>
                                 <th>Fecha de entrada</th>
+                                <th>Fecha de salida</th>
+                                <th>Num_huespedes</th>
+                                <th>Num_niños</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($reservations as $reservation)
                                 <tr>
-                                    <td>{{ $reservation->id }}</td>
                                     <td>{{ $reservation->nombre }}</td>
                                     <td>{{ $reservation->dni }}</td>
                                     <td>{{ $reservation->fecha_entrada }}</td>
+                                    <td>{{ $reservation->fecha_salida }}</td>
+                                    <td>{{ $reservation->num_huespedes }}</td>
+                                    <td>{{ $reservation->num_ninos }}</td>
                                     <td>
                                         <form action="{{ route('reservations.destroy', $reservation->id) }}" method="POST" style="display:inline-block;">
                                             @csrf

@@ -60,7 +60,6 @@
                     <tr>
                         <th>Usuario</th>
                         <th>Roles</th>
-                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,11 +80,6 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary mt-2">Actualizar Roles</button>
                                 </form>
-                            </td>
-                            <td>
-                                
-                                    <button type="submit" class="btn btn-danger mt-2">Eliminar</button>
-                            
                             </td>
                         </tr>
                     @endforeach
